@@ -11,16 +11,17 @@
 </head>
 <body>
 <div class="container">
-    <div class="container">
-        <form method="post">
-            <div class="form-group row">
-                <label for="inputName" class="col-sm-1-12 col-form-label"></label>
-                <div class="col-sm-1-12">
-                    <input type="text" class="form-control" name="inp_1" id="inp_1" placeholder="Input 1">
-                </div>
-                <div class="col-sm-1-12">
-                    <input type="text" class="form-control" name="inp_2" id="inp_2" placeholder="Input 2">
-                </div>
+    <h1>KALKULATOR</h1>
+    <form method="post">
+        <div class="form-group row">
+            <label for="inputName" class="col-sm-1-12 col-form-label"></label>
+            <div class="col-sm-1-12">
+                <input type="text" class="form-control" name="inp_1" id="inp_1" placeholder="Input 1">
+            </div>
+            <div class="col-sm-1-12">
+                <input type="text" class="form-control" name="inp_2" id="inp_2" placeholder="Input 2">
+            </div>
+            <div class="col" >
                 <select name="operator" class="form-control">
                     <option value="tambah">Tambah</option>
                     <option value="kurang">Kurang</option>
@@ -28,13 +29,14 @@
                     <option value="bagi">Bagi</option>
                 </select>
             </div>
-            <div class="form-group row">
-                <div class="offset-sm-2 col-sm-10">
-                    <button type="submit" name="calculate" class="btn btn-primary">Hitung</button>
-                </div>
+
+        </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" name="calculate" class="btn btn-primary">Hitung</button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
 
 <?php
@@ -65,7 +67,7 @@ if (isset($_POST['calculate'])) {
                 echo "Invalid ";
         }
 
-        echo '<div class="alert alert-primary" role="alert"><strong>'.$result.'</strong></div>';
+        echo '<div class="alert alert-primary" role="alert"><strong>' . $result . '</strong></div>';
     } else {
         echo "Please enter valid numeric values.";
     }
