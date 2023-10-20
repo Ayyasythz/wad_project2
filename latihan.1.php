@@ -10,7 +10,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
+<div class="container" style="max-width: 80vh; margin-top: 40vh">
     <h1>KALKULATOR</h1>
     <form method="post">
         <div class="form-group row">
@@ -18,7 +18,7 @@
             <div class="col-sm-1-12">
                 <input type="text" class="form-control" name="inp_1" id="inp_1" placeholder="Input 1">
             </div>
-            <div class="col-sm-1-12">
+            <div class="col-sm-1-12 pl-2">
                 <input type="text" class="form-control" name="inp_2" id="inp_2" placeholder="Input 2">
             </div>
             <div class="col" >
@@ -29,13 +29,14 @@
                     <option value="bagi">Bagi</option>
                 </select>
             </div>
+            <div class="form-group col">
+                <div class="">
+                    <button type="submit" name="calculate" class="btn btn-primary">Hitung</button>
+                </div>
+            </div>
 
         </div>
-        <div class="form-group row">
-            <div class="offset-sm-2 col-sm-10">
-                <button type="submit" name="calculate" class="btn btn-primary">Hitung</button>
-            </div>
-        </div>
+
     </form>
 </div>
 
@@ -69,7 +70,7 @@ if (isset($_POST['calculate'])) {
 
         echo '<div class="alert alert-primary" role="alert"><strong>' . $result . '</strong></div>';
     } else {
-        echo "Please enter valid numeric values.";
+        echo '<div class="alert alert-danger" role="alert"><strong>Kosong</strong></div>';
     }
 }
 ?>
